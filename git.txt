@@ -11,7 +11,7 @@ git status
 git add . ; git commit -m "쓰고 싶은 말" ; git push 
 
 !!! 내가 잘못 저장했을 때 최근에 저장한 지점으로 복구 하는 법 !!!
-	git add . ; git restore "망한 파일명.확장명" 
+	git restore "망한 파일명.확장명" 
 
 조원
 브렌치 만들고 (git checkout -b 브렌치명)
