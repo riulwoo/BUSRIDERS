@@ -8,7 +8,7 @@
 </head>
 <body>
 <input type = "button" value ="버튼"/>
-김민성 바보
+
 <jsp:include page="board.jsp"></jsp:include>
 </body>
 </html>
