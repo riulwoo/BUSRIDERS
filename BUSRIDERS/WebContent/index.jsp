@@ -6,7 +6,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<input type = "button" value ="버튼"/>
-<jsp:include page="board.jsp"></jsp:include>
+<!-- 노래월드컵 초기화면 -->
+<form action="worldmain" method="post">
+<input type="submit" value="시작">
+</form>
 </body>
 </html>
