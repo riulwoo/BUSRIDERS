@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +7,6 @@
 </head>
 <body>
 <input type = "button" value ="버튼"/>
-김민성 바보
 <jsp:include page="board.jsp"></jsp:include>
 </body>
 </html>
