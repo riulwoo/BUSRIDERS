@@ -35,13 +35,20 @@ padding:7px;
 </style>
 
 <body>
+<%
+String[] song = new String[64];
+%>
+
 <div class="div-style">
-노래 이상형 월드컵
+노래 이상형 월드컵 <%= song.length %> 강
+<!-- 몇강인지는 index에서 선택한걸 받아오기! 지금은 그냥 배열 크기 가져옴 -->
 </div>
+
 <form method="post">
 <table>
 <tr>
 <td>
+<!-- 배열에서 랜덤으로 유튜브 주소 가져오기 -->
 <embed src="https://www.youtube.com/embed/sqgxcCjD04s" width="500" height="300">
 </td>
 <td>
@@ -56,7 +63,7 @@ padding:7px;
 </td>
 <td>
 <div class = "btn b">
-<button tpye="button" id="rbtn">선택</button>
+<button type="button" id="rbtn">선택</button>
 </div>
 </td>
 </table>
