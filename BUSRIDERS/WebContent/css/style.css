@@ -1,0 +1,79 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.main {
+	text-align: center;
+}
+
+.jumbotron {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 500px;
+	height: 200px;
+	border: none;
+	border-radius: 15px;
+	background-color: #2AB394;
+	color: #fdfdfd;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	text-decoration: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+select::-ms-expand{
+	display: none;
+}
+
+form select {
+	width: 300px;
+	height: 35px;
+	vertical-align: middle;
+	text-align: center;
+	text-align-last: center;
+	-ms-text-align-last: center;
+	-moz-text-align-last: center;
+	margin-bottom: 1rem;
+	border: 1px solid #ababab; 
+	border-radius: 0px; /* iOS 둥근모서리 제거 */
+	
+  	-o-appearance: none;
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */
+	-moz-appearance: none;
+	appearance: none;
+}
+
+form select option {
+	text-align: center;
+	text-align-last: center;
+	-ms-text-align-last: center;
+	-moz-text-align-last: center;
+}
+form .submit {
+	width: 300px;
+	height: 35px;
+	background-color: #7d78b1;
+	border: none;
+	border-radius: 10px;
+	color: white;
+}
