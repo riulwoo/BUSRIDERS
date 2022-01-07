@@ -27,13 +27,18 @@ font-size:40px;
 margin:4px 2px;
 }
 
+<!--다시보기 랭킹보기 중앙정렬 -->
+.container {
+	flex-direction: row;
+}
+
 .reset button {background-color:#ff0000;
 		   border:1px solid #91D0D2;}
 		   
 .rank button {background-color:#0000ff;
 		   border:1px solid #AD9AEE;}	   
 		   
-.reference button {background-color:teal;
+.reference button {background-color:#2ab394;
 		   border:0px solid #AD9AEE;
 		   width: 400px;
 		   height: 60px;
@@ -56,7 +61,7 @@ header {
   height: 75px;
   padding: 1rem;
   color: white;
-  background: teal;
+  background: #2ab394;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -74,7 +79,7 @@ main {
 
 body {
   padding-top: 75px;
-  background: #EEE;
+  background: #white;
 }
 
 body, html {
@@ -90,11 +95,11 @@ body, html {
 
 <header>
 	<div class = "btn1 reference">
-<button type="button" id="main"><b>앱/웹 레퍼런스</b></button>
+<button type="button" id="main"><b>BUS RIDERS</b></button>
 	</div>
 </header>
 
-<table border = "1">
+<table border = "0" align = "center">
 
 <tr>
 <td>
@@ -106,11 +111,6 @@ body, html {
 <img src="dog.jpg" width="500"><br>
 </td>
 
-<td>
-<h3><b>댓글 창</b></h3>
-</td>
-</tr>
-
 <tr>
 <td>
 <label><b>댓글 달기</b></label></br>
@@ -118,26 +118,37 @@ body, html {
 <br><br>
 <div class = "save">
 
+<center>
 <button type="button" id="save" class="btn btn-primary btn-block"><b>입력완료</b></button>
+</center>
 </div>
 </td>
 </tr>
 
 <tr>
 <td>
+
 <!-- 빈 칸  -->
 </td>
 
 <td>
+
+<center>
 <div class = "btn reset">
 <button type="button" id="reset"><b>다시하기</b></button>
 
-<div class = "btn rank">
+<div class = "btn rank cen">
 <button type="button" id="rank"><b>랭킹보기</b></button>
 </div>
 </div>
+</center>
 </td>
 </tr>
+
+</table>
+<table border = "1" align = "center">
+
+
 
 </table>
 </body>
