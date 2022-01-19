@@ -52,8 +52,9 @@
 		int b = 1;
 		int number=0;
 
-		int round = Integer.parseInt(request.getParameter("round"));
-		int arrRound[] = new int[round];
+		String s_round = request.getParameter("round");
+		int round = Integer.parseInt(round);
+		int[] arrRound = new int[round];
 		String[] song = {"https://www.youtube.com/embed/sqgxcCjD04s","https://www.youtube.com/embed/R78C57LXd2E",
 				"https://www.youtube.com/embed/FT1pDacyuVk","https://www.youtube.com/embed/rgms0zs6SZc","https://www.youtube.com/embed/H2ncCtw2YxA",
 				"https://www.youtube.com/embed/yQ7X3mUl_F0","https://www.youtube.com/embed/3laLavGghc0","https://www.youtube.com/embed/3eKFF4cCBaY",
