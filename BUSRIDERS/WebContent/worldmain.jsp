@@ -50,9 +50,8 @@
 		<%
 		int a = 0;
 		int b = 1;
-		int number=0;
 
-		int round = Integer.parseInt(request.getParameter("round"));
+		int round = Integer.parseInt(request.getParameter("round"))/2;
 		int arrRound[] = new int[round];
 		String[] song = {"https://www.youtube.com/embed/sqgxcCjD04s","https://www.youtube.com/embed/R78C57LXd2E",
 				"https://www.youtube.com/embed/FT1pDacyuVk","https://www.youtube.com/embed/rgms0zs6SZc","https://www.youtube.com/embed/H2ncCtw2YxA",
@@ -76,28 +75,41 @@
 				"https://www.youtube.com/embed/lNvBbh5jDcA","https://www.youtube.com/embed/R3Fwdnij49o","https://www.youtube.com/embed/Wj7tpcw_LRI",
 				"https://www.youtube.com/embed/o1MtOu0Z4Hg","https://www.youtube.com/embed/0tkgGcnRNTE","https://www.youtube.com/embed/F4K1mMDlsj0",
 				"https://www.youtube.com/embed/KCpWMEsiN3Q","https://www.youtube.com/embed/VpaUh_BGqE0"};
+		String str = "";
+		for(int i = 0; i<song.length; i++){
+			if(i==0)
+				str = "" + song[i] + "";
+			else
+				str = "," + song[i] + "";
+		}
 		%>
 		<script type="text/javascript">
+		var a = "<%=a%>";
+		var b = "<%=b%>";
+		var round = "<%=round%>";
+		var number = 0;
+		var song = [<%=str%>];
+		var arrRound = new Array(round);
 		function nextLeft() {
 			arrRound[number] = song[a];
 			number++;
 			a += 2;
 			b += 2;
-			document.getElementById("left").scr = song[a];
-			document.getElementById("right").scr = song[b];
+			document.getElementById("left") = song[a];
+			document.getElementById("right") = song[b];
 		}
 		function nextRight() {
-			arrRound[number] = song[a];
+			arrRound[number] = song[b];
 			number++;
 			a += 2;
 			b += 2;
-			document.getElementById("left").scr = song[a];
-			document.getElementById("right").scr = song[b];
+			document.getElementById("left") = song[a];
+			document.getElementById("right") = song[b];
 		}
 		</script>
 		
 		<div class="div-style">
-			노래 이상형 월드컵 <%= round %> 강
+			노래 이상형 월드컵 <%= round*2 %> 강
 		</div>
 		<%
 		int num[] = new int[64];
