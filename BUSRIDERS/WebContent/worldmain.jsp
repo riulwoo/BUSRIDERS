@@ -84,8 +84,8 @@
 			number++;
 			a += 2;
 			b += 2;
-			document.getElementById("left").scr = song[a];
-			document.getElementById("right").scr = song[b];
+			document.getElementById("left") = song[a];
+			document.getElementById("right") = song[b];
 		}
 		function nextRight() {
 			arrRound[number] = song[a];
