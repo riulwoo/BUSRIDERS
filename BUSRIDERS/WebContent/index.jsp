@@ -14,7 +14,7 @@
 	좋아하는 노래 월드컵
 	</div>
 
-<form action="worldmain" method="post">
+<form action="worldmain.jsp" method="post">
 	<select name="round">
 	<option value = "8">8강</option>
 	<option value = "16">16강</option>
