@@ -18,7 +18,6 @@
 		String round = request.getParameter("round");
 		application.setAttribute("s_round", round);
 		
-		
 		//Integer i_round = (Integer)application.getAttribute("s_round");
 		
 		//노래 유튜브 주소
