@@ -16,12 +16,13 @@
 		
 		String s_round;
 		String round = request.getParameter("round");
+		if(round == null)
+			;
+		else
 		application.setAttribute("s_round", round);
-		
 		//Integer i_round = (Integer)application.getAttribute("s_round");
 		
 		//노래 유튜브 주소
-
 		String[] song = {"https://www.youtube.com/embed/sqgxcCjD04s","https://www.youtube.com/embed/R78C57LXd2E",
 				"https://www.youtube.com/embed/FT1pDacyuVk","https://www.youtube.com/embed/rgms0zs6SZc","https://www.youtube.com/embed/H2ncCtw2YxA",
 				"https://www.youtube.com/embed/yQ7X3mUl_F0","https://www.youtube.com/embed/3laLavGghc0","https://www.youtube.com/embed/3eKFF4cCBaY",
@@ -68,17 +69,10 @@
 		function nextLeft() {
 			arrRound[number] = songs[i]; //다음 토너먼트를 위해 선택된 노래 변수에 저장
 			number++;
-
-			a += 2;
-			b += 2;
-			document.getElementById("left") = song[a];
-			document.getElementById("right") = song[b];
-
 			i += 2;
 			j += 2;
 			document.getElementById("left") = songs[i];
 			document.getElementById("right") = songs[j];
-
 		}
 		//오른쪽 버튼 클릭
 		function nextRight() {
