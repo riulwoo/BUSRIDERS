@@ -11,15 +11,6 @@
 	
 	<body>
 		<%
-
-		int a = 0;
-		int b = 1;
-		int number=0;
-
-		String s_round = request.getParameter("round");
-		int round = Integer.parseInt(round);
-		int[] arrRound = new int[round];
-
 		int a = 0; //왼쪽 버튼 선택 시 왼쪽 영상이 배열에 들어갈 수 있도록 하는 변수
 		int b = 1; //오른쪽 버튼 선택
 		
