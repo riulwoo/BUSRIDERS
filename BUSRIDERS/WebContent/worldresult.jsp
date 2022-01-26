@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <title>노래 월드컵</title>
 </head>
-<body>
+<link href="./css/kkk.css" rel="stylesheet">
 
-	<link href="./css/kkk.css" rel="stylesheet">
+<body>
 
 	<header>
 		<form action="index.jsp" method="post">
@@ -18,12 +18,12 @@
 
 	<h1>최종결과</h1>
 
-	<%= request.getParameter("")%>
-
+	<center>
+		<%=request.getParameter("")%>
+	</center>
+	
 	<form action="index.jsp" method="post">
-
 		<input class="submit" type="submit" value="다시하기">
-
 	</form>
 
 </body>
