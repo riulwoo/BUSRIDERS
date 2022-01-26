@@ -1,33 +1,12 @@
-.btn button input {
+.head {
+	background-color: #2AB394;
 	color: white;
-	width: 200px;
-	height: 30px;
-	text-align: center;
-	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
-}
-
-.btn1 {
-	color: white;
-	width: 200px;
-	height: 30px;
-	text-align: center;
-	display: inline-block;
 	font-size: 40px;
-	margin: 4px 2px;
-}
-
-.reset button input submit {
-	background-color: #ff0000;
 	border: 0px;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 
 .submit {
+	border-radius: 10px;
 	color: white;
 	width: 200px;
 	height: 30px;
@@ -47,28 +26,7 @@ form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-.rank button {
-	background-color: #0000ff;
-	border: 1px solid #AD9AEE;
-}
-
-.reference {
-	background-color: #2AB394;
-	border: 0px solid #AD9AEE;
-	width: 400px;
-	height: 60px;
-	outline: 0px;
-}
-
-.save button {
-	background-color: #3366ff;
-	border: 0px solid #AD9AEE;
-	color: white;
-	width: 420px;
-	height: 30px;
-	outline: 0px;
+	margin-top: 30;
 }
 
 header {
@@ -89,9 +47,6 @@ header {
 body {
 	padding-top: 75px;
 	background: white;
-}
-
-body, html {
 	height: 200%;
 }
 
@@ -99,27 +54,9 @@ body, html {
 	box-sizing: border-box;
 }
 
-.header_text h1 {
+h1 {
 	color: black;
 	text-align: center;
 	font-size: 30px;
-	margin: 4px 2px;
-}
-
-.hover {
-	border: 1px solid;
-	padding: 10px;
-	width: 300px;
-}
-
-.show-hover {
-	display: none;
-}
-
-.hover:hover .show-hover {
-	display: block;
-}
-
-.hover:hover .hidden-hover {
-	display: none;
+	margin-top: 40px;
 }

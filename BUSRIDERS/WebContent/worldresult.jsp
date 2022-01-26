@@ -11,42 +11,20 @@
 	<link href="./css/kkk.css" rel="stylesheet">
 
 	<header>
-		<input type="submit" class="btn1 reference" value="Team Busriders">
-		</button>
+		<form action="index.jsp" method="post">
+			<input class="head" type="submit" value="Team Busriders">
+		</form>
 	</header>
 
-	<table style="margin-left: auto; margin-right: auto;" border="1">
+	<h1>최종결과</h1>
 
-		<tr>
-			<td class="header_text">
+	<%= request.getParameter("")%>
 
-				<h1>
-					<b>최종결과</b>
-				</h1>
+	<form action="index.jsp" method="post">
 
-			</td>
-		</tr>
+		<input class="submit" type="submit" value="다시하기">
 
-		<tr>
-			<td>
-			<h2>유튜브 링크 올라오는 공간</h2>
-			</td>
-		</tr>
+	</form>
 
-		<tr>
-			<td>
-
-				<form action="index.jsp" method="post">
-
-					<input class="submit" type="submit" value="다시하기">
-
-
-				</form>
-
-			</td>
-		</tr>
-
-
-	</table>
 </body>
 </html>
