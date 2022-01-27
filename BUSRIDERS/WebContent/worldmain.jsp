@@ -21,6 +21,7 @@ String num_str;
 int num[] = new int[64]; //랜덤으로 0~64까지 저장하는 배열
 int selectNum = 0;
 boolean flag = false;
+
 %>
 
 <%
