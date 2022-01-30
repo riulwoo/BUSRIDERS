@@ -17,14 +17,11 @@
 	</header>
 
 	<h1>최종결과</h1>
-<<<<<<< HEAD
-	<%String result = request.getParameter("") %>
-=======
+	<%String result = request.getParameter("result"); %>
 
 	<center>
-		<%String song = application.getAttribute("")%>
+		<iframe src=<%=result%> frameborder="0" width="500" height="300"></iframe>
 	</center>
->>>>>>> 757ce63b0a0a20e19db533b194190696ade1595d
 	
 	<form action="index.jsp" method="post">
 		<input class="submit" type="submit" value="다시하기">

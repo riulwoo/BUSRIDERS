@@ -98,6 +98,7 @@ var song = [<%=song_str%>];
 var num = [<%=num_str%>];
 var arrRound = new Array(count);
 var nextRound = new Array();
+var result;
 
 	function nextLeft(){
 		if(number-64 < count - 1){
@@ -113,8 +114,8 @@ var nextRound = new Array();
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-			}else if(count == 1){
-				location.href = "worldresult.jsp";
+				document.getElementById("ss").value = song[a];
+				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
 			}
@@ -142,8 +143,8 @@ var nextRound = new Array();
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-			}else if(count == 1){
-				location.href = "worldresult.jsp";
+				document.getElementById("ss").value = song[b];
+				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
 			}
@@ -159,20 +160,21 @@ var nextRound = new Array();
 	}
 </script>
 	<div class="rect1">
-		<iframe src="<%=song[num[a]]%>" id="left" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="500" height="300"></iframe>
 	</div>
 	<div class="rect2">
-		<iframe src="<%=song[num[b]]%>" id="right" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="500" height="300"></iframe>
 	</div>
 	
-	<div class = "btn a">
+	<input type="hidden" id="ss" name="result" value="">
+	
+	<div class = "btn a" id = "div-lbtn">
 		<button type="button" onclick="nextLeft()" id="lbtn">선택</button>
 	</div>
-	<div class = "btn b">
+	
+	<div class = "btn b" id = "div-rbtn">
 		<button type="button" onclick="nextRight()" id="rbtn">선택</button>
 	</div>
 </form>
-
-
 </body>
 </html>
