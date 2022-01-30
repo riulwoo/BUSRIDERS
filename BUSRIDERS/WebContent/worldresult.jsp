@@ -17,10 +17,14 @@
 	</header>
 
 	<h1>최종결과</h1>
+<<<<<<< HEAD
+	<%String result = request.getParameter("") %>
+=======
 
 	<center>
 		<%String song = application.getAttribute("")%>
 	</center>
+>>>>>>> 757ce63b0a0a20e19db533b194190696ade1595d
 	
 	<form action="index.jsp" method="post">
 		<input class="submit" type="submit" value="다시하기">
