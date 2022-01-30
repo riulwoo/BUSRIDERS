@@ -17,9 +17,8 @@
 	</header>
 
 	<h1>최종결과</h1>
-
-	<%= request.getParameter("")%>
-
+	<%String result = request.getParameter("") %>
+	
 	<form action="index.jsp" method="post">
 
 		<input class="submit" type="submit" value="다시하기">
