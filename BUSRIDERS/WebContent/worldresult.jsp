@@ -19,7 +19,7 @@
 	<h1>최종결과</h1>
 
 	<center>
-		<%=request.getParameter("")%>
+		<%String song = application.getAttribute("")%>
 	</center>
 	
 	<form action="index.jsp" method="post">

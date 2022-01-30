@@ -113,7 +113,6 @@ var nextRound = new Array();
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-				location.href = "worldresult.jsp";
 			}else if(count == 1){
 				location.href = "worldresult.jsp";
 			}else{
