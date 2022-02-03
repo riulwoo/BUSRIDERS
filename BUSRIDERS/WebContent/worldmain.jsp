@@ -96,10 +96,7 @@ var num = [<%=num_str%>];
 var arrRound = new Array(count);
 var nextRound = new Array();
 var result;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/bchy
 	function nextLeft(){
 		if(number-64 < count - 1){
 			song[number] = song[parseInt(num[a])];
@@ -113,16 +110,9 @@ var result;
 			if(count == 4){
 				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
 			}else if(count == 2){
-<<<<<<< HEAD
 				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-=======
 				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
->>>>>>> 0ac1406b666780e0f433954ea982de12a5313d6e
 				document.getElementById("ss").value = song[a];
-<<<<<<< HEAD
-				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
-=======
 			}else if(count == 1){
 				a -= 2;
 				document.getElementById("ss").value = song[a];
@@ -133,7 +123,6 @@ var result;
 				num = [<%=num_str%>];
 				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
->>>>>>> origin/bchy
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
 			}
@@ -160,17 +149,9 @@ var result;
 			if(count == 4){
 				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
 			}else if(count == 2){
-<<<<<<< HEAD
 				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-<<<<<<< HEAD
-=======
 				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
->>>>>>> 0ac1406b666780e0f433954ea982de12a5313d6e
 				document.getElementById("ss").value = song[b];
-				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
-=======
-				document.getElementById("ss").value = song[b];	
 			}else if(count == 1){
 				b -= 2;
 				document.getElementById("ss").value = song[b];
@@ -181,7 +162,6 @@ var result;
 				num = [<%=num_str%>];
 				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
->>>>>>> origin/bchy
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
 			}
