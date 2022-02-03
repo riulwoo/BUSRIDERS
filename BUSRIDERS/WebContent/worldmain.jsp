@@ -8,6 +8,7 @@
 <title>노래 월드컵</title>
 </head>
 <link href="./css/bchy.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
 <body>
 <header>
 	<form action="index.jsp" method="post">
@@ -79,13 +80,6 @@ for(int i = 0; i<num.length; i++){
 }
 	
 %>
-
-<div class="div-style" id="div-round">
-	노래 월드컵 <%=round %> 강
-</div>
-
-<form action="worldresult.jsp" method="post">
-
 <script type="text/javascript">
 var a = 0;
 var b = 1;
@@ -176,12 +170,18 @@ var result;
 		}
 	}
 </script>
+<div class = "container">
+<div class="div-style" id="div-round">
+	노래 월드컵 <%=round %> 강
+</div>
+
+<form action="worldresult.jsp" method="post">
 	<div class = "rect">
 	<div class="rect1">
-		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="700wh" height="600"></iframe>
+		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
 	</div>
 	<div class="rect2">
-		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="700wh" height="600"></iframe>
+		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
 	</div>
 	</div>
 	<input type="hidden" id="ss" name="result" value="">
@@ -194,5 +194,6 @@ var result;
 	</div>
 	</div>
 </form>
+</div>
 </body>
 </html>
