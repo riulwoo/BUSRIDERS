@@ -14,15 +14,12 @@ border-radius:7px;
 }
 .a button {background-color:#C35F5F;
 		   border:1px solid #B93C3C;
-		   position:absolute;
-		   left:251.5px; bottom:150px;}
+}
 .b button {background-color:#3296D7;
-		   border:1px solid #1E82CD;
-		   position:absolute;
-		   right:245.5px; bottom:150px;}
+		   border:1px solid #1E82CD;}
 				   
 .div-style {
-width:1410px;
+width:100wh;
 height:60px;
 text-align:center;
 background-color:#2AB394;
@@ -34,20 +31,14 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:7px;
-position:absolute;
-left:250px;
-top:30px;
-
 }
 
-.rect1 {
-	top:120px;
-	left:251.5px;
-	position:absolute;
+.rect {
+	display: flex;
+	justify-content: center;
 }
-.rect2{
-	top:120px;
-	right:245.5px;
-	position:absolute;
+.btnflex{
+	display: flex;
+	justify-content: center;
 }
 

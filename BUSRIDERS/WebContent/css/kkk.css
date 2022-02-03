@@ -8,8 +8,8 @@
 .submit {
 	border-radius: 10px;
 	color: white;
-	width: 200px;
-	height: 30px;
+	width: 800px;
+	height: 60px;
 	text-align: center;
 	display: inline-block;
 	font-size: 16px;
@@ -20,7 +20,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 form {
@@ -60,5 +60,6 @@ h1 {
 	color: black;
 	text-align: center;
 	font-size: 30px;
-	margin-top: 40px;
+	margin-top: 60px;
+	margin-bottom: 40px;
 }

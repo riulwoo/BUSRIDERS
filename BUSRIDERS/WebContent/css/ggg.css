@@ -4,6 +4,7 @@
 
 body {
 	background-color : #d8e7e3;
+	padding-top : 5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;

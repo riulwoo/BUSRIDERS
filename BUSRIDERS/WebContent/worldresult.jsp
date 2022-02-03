@@ -20,7 +20,7 @@
 	<%String result = request.getParameter("result"); %>
 
 	<center>
-		 <iframe src=<%=result%>?amp;autoplay=1 frameborder="0" width="600" height="500"></iframe> 
+		 <iframe src=<%=result%>?amp;autoplay=1 frameborder="0" width="900" height="500"></iframe> 
 	</center>
 	
 	<form action="index.jsp" method="post">
