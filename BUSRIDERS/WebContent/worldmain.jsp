@@ -107,23 +107,14 @@ var result;
 			document.getElementById("right").src = song[parseInt(num[b])];
 		}else if(number-64 == count - 1){
 			if(count == 4){
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
+				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
 			}else if(count == 2){
-				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-				document.getElementById("ss").value = song[a];
+				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
 			}else if(count == 1){
-				a -= 2;
 				document.getElementById("ss").value = song[a];
-				a = 0;
-				b = 1;
-				number = 64;
-				song = [<%=song_str%>];
-				num = [<%=num_str%>];
-				count = <%=round%>/2;
-				location.href = "worldresult.jsp";
+				document.getElementById("songmain").submit();
 			}else{
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
+				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
 			}
 			song[number] = song[parseInt(num[a])];
 			num[number] = num[a];
@@ -146,23 +137,14 @@ var result;
 			document.getElementById("right").src = song[parseInt(num[b])];
 		}else if(number-64 == count - 1){
 			if(count == 4){
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
+				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
 			}else if(count == 2){
-				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-				document.getElementById("ss").value = song[b];	
+				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
 			}else if(count == 1){
-				b -= 2;
 				document.getElementById("ss").value = song[b];
-				a = 0;
-				b = 1;
-				number = 64;
-				song = [<%=song_str%>];
-				num = [<%=num_str%>];
-				count = <%=round%>/2;
-				location.href = "worldresult.jsp";
+				document.getElementById("songmain").submit();
 			}else{
-				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
+				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
 			}
 			song[number] = song[parseInt(num[b])];
 			num[number] = num[b];
@@ -175,7 +157,7 @@ var result;
 		}
 	}
 </script>
-<form action="worldresult.jsp" method="post">
+<form id="songmain" action="worldresult.jsp" method="post">
 	<div class = "rect">
 		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
 		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
