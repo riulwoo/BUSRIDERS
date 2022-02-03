@@ -16,11 +16,11 @@
 		</form>
 	</header>
 
-	<h1>최종결과</h1>
+	<h1>최종 결과</h1>
 	<%String result = request.getParameter("result"); %>
 
 	<center>
-		<iframe src=<%=result%> frameborder="0" width="500" height="300"></iframe>
+		 <iframe src=<%=result%>?amp;autoplay=1 frameborder="0" width="600" height="500"></iframe> 
 	</center>
 	
 	<form action="index.jsp" method="post">
