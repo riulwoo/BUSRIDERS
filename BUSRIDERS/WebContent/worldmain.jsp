@@ -160,10 +160,10 @@ var result;
 	}
 </script>
 	<div class="rect1">
-		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="700" height="600"></iframe>
 	</div>
 	<div class="rect2">
-		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="700" height="600"></iframe>
 	</div>
 	
 	<input type="hidden" id="ss" name="result" value="">
