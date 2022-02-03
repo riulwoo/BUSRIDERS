@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>노래 월드컵</title>
+<title>노래 이상형 월드컵</title>
 </head>
 <link href="./css/bchy.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
@@ -80,6 +80,13 @@ for(int i = 0; i<num.length; i++){
 }
 	
 %>
+
+<div class="div-style" id="div-round">
+	노래 이상형 월드컵 <%=round %> 강
+</div>
+
+<form action="worldresult.jsp" method="post">
+
 <script type="text/javascript">
 var a = 0;
 var b = 1;
@@ -90,7 +97,6 @@ var num = [<%=num_str%>];
 var arrRound = new Array(count);
 var nextRound = new Array();
 var result;
-
 	function nextLeft(){
 		if(number-64 < count - 1){
 			song[number] = song[parseInt(num[a])];
@@ -102,10 +108,10 @@ var result;
 			document.getElementById("right").src = song[parseInt(num[b])];
 		}else if(number-64 == count - 1){
 			if(count == 4){
-				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
 				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
 				document.getElementById("ss").value = song[a];
 			}else if(count == 1){
 				a -= 2;
@@ -118,7 +124,7 @@ var result;
 				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
 			}else{
-				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
 			}
 			song[number] = song[parseInt(num[a])];
 			num[number] = num[a];
@@ -141,11 +147,11 @@ var result;
 			document.getElementById("right").src = song[parseInt(num[b])];
 		}else if(number-64 == count - 1){
 			if(count == 4){
-				document.getElementById("div-round").innerHTML = "노래 월드컵 준결승";
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
 				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
-				document.getElementById("div-round").innerHTML = "노래 월드컵 결승";
-				document.getElementById("ss").value = song[b];
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
+				document.getElementById("ss").value = song[b];	
 			}else if(count == 1){
 				b -= 2;
 				document.getElementById("ss").value = song[b];
@@ -157,7 +163,7 @@ var result;
 				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
 			}else{
-				document.getElementById("div-round").innerHTML = "노래 월드컵 " + count + " 강";
+				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
 			}
 			song[number] = song[parseInt(num[b])];
 			num[number] = num[b];
@@ -179,19 +185,21 @@ var result;
 	<div class = "rect">
 	<div class="rect1">
 		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
+		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="500" height="300"></iframe>
 	</div>
 	<div class="rect2">
 		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
+		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="500" height="300"></iframe>
 	</div>
-	</div>
+	
 	<input type="hidden" id="ss" name="result" value="">
-	<div class = "btnflex">
+	
 	<div class = "btn a" id = "div-lbtn">
 		<button type="button" onclick="nextLeft()" id="lbtn">선택</button>
 	</div>
+	
 	<div class = "btn b" id = "div-rbtn">
 		<button type="button" onclick="nextRight()" id="rbtn">선택</button>
-	</div>
 	</div>
 </form>
 </div>
