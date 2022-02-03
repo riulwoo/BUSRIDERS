@@ -6,7 +6,7 @@
 <title>노래 월드컵</title>
 </head>
 <body>
-<link href="./css/style.css" rel="stylesheet">
+<link href="./css/ggg.css" rel="stylesheet">
 <!-- 노래월드컵 초기화면 -->
 <div class="main">
 	<h1>Team Busriders</h1>
