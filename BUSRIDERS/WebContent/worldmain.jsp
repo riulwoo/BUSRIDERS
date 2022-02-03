@@ -81,12 +81,11 @@ for(int i = 0; i<num.length; i++){
 	
 %>
 
+
+<div class = "container">
 <div class="div-style" id="div-round">
-	노래 이상형 월드컵 <%=round %> 강
+	노래 월드컵 <%=round %> 강
 </div>
-
-<form action="worldresult.jsp" method="post">
-
 <script type="text/javascript">
 var a = 0;
 var b = 1;
@@ -176,30 +175,19 @@ var result;
 		}
 	}
 </script>
-<div class = "container">
-<div class="div-style" id="div-round">
-	노래 월드컵 <%=round %> 강
-</div>
-
 <form action="worldresult.jsp" method="post">
 	<div class = "rect">
-	<div class="rect1">
 		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
-		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="500" height="300"></iframe>
-	</div>
-	<div class="rect2">
 		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" margin = 5px width = "700wh"	height = "500"></iframe>
-		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="500" height="300"></iframe>
 	</div>
-	
 	<input type="hidden" id="ss" name="result" value="">
-	
+	<div class = "btnflex">
 	<div class = "btn a" id = "div-lbtn">
 		<button type="button" onclick="nextLeft()" id="lbtn">선택</button>
 	</div>
-	
 	<div class = "btn b" id = "div-rbtn">
 		<button type="button" onclick="nextRight()" id="rbtn">선택</button>
+	</div>
 	</div>
 </form>
 </div>
