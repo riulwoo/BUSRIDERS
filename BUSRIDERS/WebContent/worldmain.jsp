@@ -9,24 +9,24 @@
 </head>
 <link href="./css/bchy.css" rel="stylesheet">
 <body>
-
+<header>
+	<form action="index.jsp" method="post">
+		<input class="head" type="submit" value="Team Busriders">
+	</form>
+</header>
 <%!
 int a = 0;
 int b = 1;
-
 int number = 0;
 String song_str;
 String num_str;
-
 int num[] = new int[64]; //랜덤으로 0~64까지 저장하는 배열
 int selectNum = 0;
 boolean flag = false;
-
 %>
 
 <%
 int round = Integer.parseInt(request.getParameter("round"));
-
 //노래 유튜브 주소
 String[] song = {"https://www.youtube.com/embed/sqgxcCjD04s","https://www.youtube.com/embed/R78C57LXd2E",
 		"https://www.youtube.com/embed/FT1pDacyuVk","https://www.youtube.com/embed/rgms0zs6SZc","https://www.youtube.com/embed/H2ncCtw2YxA",
@@ -71,15 +71,12 @@ for(int i = 0; i<song.length; i++){
 	else
 		song_str += ",'" + song[i] + "'";
 }
-
-
 for(int i = 0; i<num.length; i++){
 	if(i==0)
 		num_str = "'" + num[i] + "'";
 	else
 		num_str += ",'" + num[i] + "'";
 }
-
 	
 %>
 
@@ -98,7 +95,7 @@ var song = [<%=song_str%>];
 var num = [<%=num_str%>];
 var arrRound = new Array(count);
 var nextRound = new Array();
-
+var result;
 	function nextLeft(){
 		if(number-64 < count - 1){
 			song[number] = song[parseInt(num[a])];
@@ -112,9 +109,18 @@ var nextRound = new Array();
 			if(count == 4){
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
+				document.getElementById("div-lbtn").innerHTML = '<button type="submit">선택</button>';
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
-				location.href = "worldresult.jsp";
+				document.getElementById("ss").value = song[a];
 			}else if(count == 1){
+				a -= 2;
+				document.getElementById("ss").value = song[a];
+				a = 0;
+				b = 1;
+				number = 64;
+				song = [<%=song_str%>];
+				num = [<%=num_str%>];
+				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
@@ -142,8 +148,18 @@ var nextRound = new Array();
 			if(count == 4){
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 준결승";
 			}else if(count == 2){
+				document.getElementById("div-rbtn").innerHTML = '<button type="submit">선택</button>';
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 결승";
+				document.getElementById("ss").value = song[b];	
 			}else if(count == 1){
+				b -= 2;
+				document.getElementById("ss").value = song[b];
+				a = 0;
+				b = 1;
+				number = 64;
+				song = [<%=song_str%>];
+				num = [<%=num_str%>];
+				count = <%=round%>/2;
 				location.href = "worldresult.jsp";
 			}else{
 				document.getElementById("div-round").innerHTML = "노래 이상형 월드컵 " + count + " 강";
@@ -160,20 +176,21 @@ var nextRound = new Array();
 	}
 </script>
 	<div class="rect1">
-		<iframe src="<%=song[num[a]]%>" id="left" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[a]]%>" id="left" name="ileft" frameborder="0" width="500" height="300"></iframe>
 	</div>
 	<div class="rect2">
-		<iframe src="<%=song[num[b]]%>" id="right" width="500" height="300"></iframe>
+		<iframe src="<%=song[num[b]]%>" id="right" name="iright" frameborder="0" width="500" height="300"></iframe>
 	</div>
 	
-	<div class = "btn a">
+	<input type="hidden" id="ss" name="result" value="">
+	
+	<div class = "btn a" id = "div-lbtn">
 		<button type="button" onclick="nextLeft()" id="lbtn">선택</button>
 	</div>
-	<div class = "btn b">
+	
+	<div class = "btn b" id = "div-rbtn">
 		<button type="button" onclick="nextRight()" id="rbtn">선택</button>
 	</div>
 </form>
-
-
 </body>
 </html>
