@@ -37,6 +37,10 @@ padding:7px;
 	display: flex;
 	justify-content: center;
 }
+
+iframe{
+	margin : 5px;
+}
 .btnflex{
 	display: flex;
 	justify-content: center;
