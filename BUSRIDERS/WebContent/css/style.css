@@ -3,6 +3,7 @@
 }
 
 body {
+	background-color : #d8e7e3;
 	display: flex;
 	align-items: center;
 	justify-content: center;
